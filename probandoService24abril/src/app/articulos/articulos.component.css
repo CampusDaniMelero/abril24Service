@@ -1,0 +1,125 @@
+/* General Styles */
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #333; /* Dark gray for headings */
+  }
+  
+  /* Card Container Styles */
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: space-between; /* Distribute cards evenly */
+    margin: 0 auto; /* Center container horizontally */
+    max-width: 1000px; /* Limit container width for larger screens */
+    padding: 1rem;
+  }
+  
+  /* Article Card Styles */
+  
+  .article-card {
+    background-color: #fff; /* White background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem; /* Spacing between cards */
+    width: calc(33% - 2rem); /* Calculate card width based on columns */
+    display: flex; /* Arrange elements side-by-side */
+    flex-direction: column; /* Stack elements vertically */
+    transition: all 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .article-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle hover effect */
+  }
+  
+  /* Article Content Styles */
+  
+  .article-content {
+    flex: 1; /* Allow content area to expand */
+    padding-right: 1.5rem; /* Spacing between content and image */
+  }
+  
+  .article-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+    color: #222; /* Darker gray for titles */
+  }
+  
+  /* Article Description Styles */
+  
+  .article-description {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666; /* Light gray for descriptions */
+  }
+  
+  /* Long Description Styles */
+  
+  .long-description {
+    background-color: #e6e6e6; /* Even lighter gray background */
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Slightly smaller font for long descriptions */
+    color: #666; /* Light gray for long descriptions */
+  }
+  
+  /* Article Button Styles */
+  
+  .article-button {
+    background-color: #3f51b5; /* Royal blue */
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  .article-button:hover {
+    background-color: #28377d; /* Darker blue on hover */
+  }
+  
+  /* Article Image Styles */
+  
+  .article-image {
+    width: 100%; /* Adjust image width if needed */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Responsive Adjustments (Optional) */
+  
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column; /* Cards stack vertically on smaller screens */
+    }
+  
+    .article-card {
+      width: 100%; /* Cards take full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .article-card h2 {
+      font-size: 1.6rem; /* Adjust heading size for smaller screens */
+    }
+
+    .article-description {
+      font-size: 0.9rem; /* Adjust description size for smaller screens */
+      /* Agrega un fondo a la descripcion de un tono gris  */
+        background-color: #f5f5f5; /* Light gray background */
+    }
+}

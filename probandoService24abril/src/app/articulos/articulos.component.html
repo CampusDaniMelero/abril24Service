@@ -1,0 +1,20 @@
+<h1>Blog sobre Fútbol profesional</h1>
+<a href="blog2">Ir al Ejercicio 2</a>
+
+<div class="card-container">
+  <div class="article-card" *ngFor="let articulo of servicio.getArticulos(); track articleId">
+    <a [routerLink]="['/articulo', articleId]"> </a>
+    <h2>{{ articulo.title }}</h2>
+    <img [src]="articulo.imageURL" alt="{{ articulo.title }}" class="article-image">
+    <h3 class="article-description">{{ articulo.shortDescription}}</h3>
+    <button class="article-button" (click)="toggleLongDescription(articulo.id)">
+      {{ showLongDescription && articleId === articulo.id ? 'Ocultar descripción' : 'Leer más' }}
+    </button>
+    <div id="long-description-container" *ngIf="showLongDescription && articleId === articulo.id">
+      {{ articulo.longDescription }}
+    </div>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
